@@ -1,0 +1,138 @@
+@color:green;
+.border-radius (@radius:5px){
+  border-radius:@radius;
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+}
+.bordered{
+  border-top:1px dotted black;
+  border-bottom:2px solid black;
+}
+//@arguments包含了所有传递进来的参数. 如果你不想单独处理每一个参数的话就可以像这样写:
+.box-shadow (@x:0,@y:0,@blur:1px,@color:#000){
+  box-shadow:@arguments;
+  -moz-box-shadow:@arguments;
+  -webkit-box-shadow:@arguments;
+}
+
+
+
+.aa{
+  width:100px;
+  height:30px;
+  line-height:30px;
+  text-align:center;
+  border:1px solid @color;
+  //.border-radius;
+  .border-radius(50px);
+}
+.bb{
+  h1{
+    font-size:26px;
+    font-weight:bold;
+  }
+  p{
+    font-size:12px;
+    a{
+      text-decoration:none;
+      &:hover{
+        color:@color;
+      }
+    }
+  }
+}
+.cc{
+  color:#d58512;
+  .bordered;
+  .box-shadow(2px 5px);
+}
+
+
+/*
+ *   @轮播图
+ */
+.swiper_box .swiper-container{height:13.6rem;top:0;}
+.swiper_box .swiper-wrapper{position:relative;}
+.swiper_box .swiper-slide img{width:100%;height:13.6rem;}
+/*.swiper_box .pagination {position: absolute;z-index: 20;bottom: 0.2rem;width: 100%;text-align: center;}*/
+/*.swiper_box .swiper-pagination-switch {display: inline-block;width: 0.1rem;height: 0.1rem;border-radius: 50%;background: #555;margin: 0 0.06rem;opacity: 0.8;border: 1px solid #fff;cursor: pointer;}*/
+/*.swiper_box .pagination .swiper-pagination-bullet {display: inline-block;width: 0.4rem;height: 0.4rem;border-radius: 50%;background: #fff;margin: 0 0.06rem;opacity: 0.8;cursor: pointer;}*/
+//#aaa .swiper-pagination-bullet{background:pink;}
+//#aaa .swiper-pagination-bullet-active{background:blue;}
+//.swiper_box .swiper-active-switch {background: #fff;}
+ //swiper-pagination-bullet-active
+
+/*
+  *flex布局
+*/
+//容器属性
+.flex-container-mixin(@box_align:start,@height_align:start){
+  display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+  display: -moz-box; /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox; /* 混合版本语法: IE 10 */
+  display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+  display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+  /*子元素在主轴的对齐方式（新旧语法）*/
+  -webkit-box-pack: @box_align;
+  -moz-justify-content: @box_align;
+  -webkit-justify-content: @box_align;
+  justify-content: @box_align;
+  /*子元素交叉轴对齐方式*/
+  -webkit-box-align: @height_align;
+  -moz-align-items: @height_align;
+  -webkit-align-items: @height_align;
+  align-items: @height_align;
+  /*子元素的显示方向---左到右*/
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+//子元素属性
+.flex(@flex) {
+  -webkit-box-flex: @flex;
+  -moz-box-flex: @flex;
+  -o-box-flex: @flex;
+  box-flex: @flex;//box-flex定义是否允许当前子元素伸缩
+  -webkit-flex: @flex;
+  -moz-flex: @flex;
+  -ms-flex: @flex;
+  -o-flex: @flex;
+  flex: @flex;
+}
+.flex-column-mixin(){
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+/*
+ *   @mixin 应用
+ */
+
+
+.dd{
+  width:300px;
+  height:100px;
+  border:1px solid green;
+  .flex-container-mixin(center,center);
+  .flex(1.0);
+}
+.ee{
+  //width:50px;
+  height:50px;
+  border:1px solid red;
+  //margin-right:3px;
+  .flex-container-mixin(center,center);
+  .flex(1.0);
+}
+.ff{
+  //width:50px;
+  height:50px;
+  border:1px solid cornflowerblue;
+  .flex-container-mixin(center,center);
+  .flex(2.0);
+}

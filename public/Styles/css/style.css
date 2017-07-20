@@ -1,0 +1,430 @@
+/* 
+	*2017-07-19
+	*pxq初始化样式 
+*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+  body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
+   h1, h2, h3, h4, h5, h6{ font-size:100%; } 
+  address, cite, dfn, em, var { font-style:normal; }
+  code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+  small{ font-size:12px; }
+  ul, ol { list-style:none; }
+  a { text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  sup { vertical-align:text-top; }
+  sub{ vertical-align:text-bottom; }
+  legend { color:#000; }
+  fieldset, img { border:0; }
+  button, input, select, textarea { font-size:100%; }
+  table { border-collapse:collapse; border-spacing:0; }
+
+/*
+	  *flex布局
+	*/
+
+
+.box {
+	display: -webkit-box;
+	/* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+	display: -moz-box;
+	/* 老版本语法: Firefox (buggy) */
+	display: -ms-flexbox;
+	/* 混合版本语法: IE 10 */
+	display: -webkit-flex;
+	/* 新版本语法: Chrome 21+ */
+	display: flex;
+	/* 新版本语法: Opera 12.1, Firefox 22+ */
+}
+
+.box_center {
+	/*子元素在主轴的对齐方式（新旧语法）*/
+	-webkit-box-pack: center;
+	-moz-justify-content: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	/*子元素交叉轴对齐方式*/
+	-webkit-box-align: center;
+	-moz-align-items: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+
+/* 
+	***2017-07-19
+	***首页样式
+   */
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	width: 100%;
+	height: 37px;
+	background-color: #f7f7f7;
+	line-height: 37px;
+}
+
+header h3 {
+	font-size: 17px;
+	color: #232323;
+	text-align: center;
+	font-weight: normal;
+}
+
+.p_headerleft {
+	position: absolute;
+	top: 6px;
+	left: 5%;
+	width: 24px;
+	height: 24px;
+}
+
+.p_headerright {
+	position: absolute;
+	top: 6px;
+	right: 5%;
+	width: 24px;
+	height: 24px;
+}
+
+.p_headerleft a,
+.p_headerright a {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+}
+.p_headerleft a img,
+.p_headerright a img {
+	width: 24px;
+	height: 24px;
+}
+.index_body{
+	width:100%;
+	background:url(../img/index_bg.png) no-repeat;
+	background-size: 100%;
+}
+.p_index_title{
+	width: 100%;
+	height: 70px;
+	padding-top: 110px;
+	text-align: center;
+}
+.p_index_title h2{
+	font-size: 30px;
+	color: #232323;
+	font-weight: normal;
+}
+.p_index_title h5{
+	font-size: 14px;
+	color: #1b1919;
+	font-weight: normal;
+}
+.p_buy,.p_sell{
+	width:100%;
+	text-align: center;
+	padding-top:50px;
+}
+.p_sell{
+	padding-top: 16px;
+}
+.p_buy a,.p_sell a{
+	display: inline-block;
+	width:53%;
+	height: 64px;
+	border-radius: 3px;
+	line-height: 64px;
+	text-align: center;
+	font-size: 15px;
+	color: #fff;
+	background-color: #f7c114;
+}
+.p_sell a{
+	background-color: #0274ff;
+}
+.P_log_reg{
+	font-size:13px;
+	color: #565656;
+	text-align: center;
+	padding-top: 100px;
+}
+.P_log_reg a{
+	font-size: 13px;
+	color: #565656;
+}
+/*
+ 
+ * 代购项目---登录页
+ * pxq 2017-07-20
+ * */
+.p_login_img{
+	width:100%;
+	height:250px;
+	background:url(../img/log.png) no-repeat;
+	background-size:100% 250px;
+}
+.p_tab_title{
+	position: relative;
+}
+.p_item_log{
+	position: absolute;
+	left: 75px;
+	bottom:8px;
+	color: #fff;
+	font-size: 14px;
+}
+.p_item_reg{
+	position: absolute;
+	bottom:8px;
+	right:75px;
+	color: #fff;
+	font-size: 14px;
+}
+.p_triangle_log{
+	display: none;
+	width:0;
+    height:0;
+    border-width:0 10px 10px;
+    border-style:solid;
+    border-color:transparent transparent #fff;
+    position: absolute;
+    bottom: -1px;
+    left:79px;
+}
+.p_triangle_reg{
+	display: none;
+	width:0;
+    height:0;
+    border-width:0 10px 10px;
+    border-style:solid;
+    border-color:transparent transparent #fff;
+	position: absolute;
+    bottom: -1px;
+    right:79px;
+}
+
+.p_logcont{
+	display: none;
+	text-align: center;
+}
+.p_log_emil,.p_log_password{
+	width:176px;
+	height:40px;
+	border:1px solid #e7e7e7;
+	border-radius: 50px;
+	color:#232323;
+	font-size:13px;
+	padding: 0 48px 0 26px;
+	margin-top:40px;
+	background:#f5f5f5 url(../img/emil.png) no-repeat 216px center;
+	background-size:18px 18px;
+}
+.p_log_password{
+	color:#a6a6a6;
+	margin-top:15px;
+	background:#f5f5f5 url(../img/password.png) no-repeat 216px center;
+	background-size:18px 18px;
+}
+.p_log_btn{
+	width:250px;
+	height:40px;
+	background-color: #f7c114;
+	border:none;
+	border-radius: 50px;
+	margin-top: 25px;
+}
+.p_log_btn a{
+	color: #232323;
+	font-size: 15px;
+}
+.p_forget_password{
+	margin-top: 20px;
+}
+.p_forget_password a{
+	color:#565656;
+	font-size: 13px;
+}
+.p_regcont{
+	display: none;
+	text-align: center;
+}
+.p_reg_emil{
+	margin-top:22px;
+}
+.p_reg_password,.p_reg_pw2,.p_reg_name{
+	margin-top:15px;
+}
+.p_reg_password,.p_reg_pw2{
+	background:#f5f5f5 url(../img/password.png) no-repeat 216px center;
+	background-size:18px 18px;
+}
+.p_reg_name{
+	background:#f5f5f5 url(../img/name.png) no-repeat 216px center;
+	background-size:18px 18px;
+}
+/*
+ 
+ * 注册弹框
+ * pxq 2017-07-20
+ * */
+.p_reg_mask{
+	display: none;
+	width:60%;
+	height:245px;
+	background-color: #fff;
+	text-align: center;
+}
+.p_mail{
+	margin-top: 26px;
+}
+.p_mail img{
+	width:115px;
+	height: 63px;
+}
+.p_reg_mask h4{
+	font-size:14px;
+	color:#232323;
+	margin:14px 0;
+}
+.p_reg_mask p{
+	color:#8e8e8e;
+	font-size:12px;
+	width:80%;
+	margin-left: 10%;
+}
+.p_goemil{
+	width:66%;
+	height: 30px;
+	border-radius: 50px;
+	line-height: 30px;
+	background-color: #f7c114;
+	margin-top: 20px;
+	margin-left: 17%;
+}
+.p_goemil a{
+	font-size:14px;
+	color:#232323;
+}
+.p_close{
+	width:26px;
+	height:26px;
+	position: absolute;
+	top:-13px;
+	right:-13px;
+	background:url(../img/p_close.png) no-repeat;
+	background-size:26px 26px;
+}
+/*
+ 
+ * 发布航班信息页面
+ * pxq 2017-07-20
+ * */
+.p_fight_bg{
+	width:100%;
+	background:url(../img/fight_bg.png) no-repeat;
+	background-size: 100%;
+}
+.p_fight{
+	width:90%;
+	height:500px;
+	margin:34px 5%;
+	text-align: center;
+	color:#fff;
+	background-color: #fff;
+}
+.p_fight_box{
+	background:url(../img/fight_information.png) no-repeat; 
+	background-size: 100% 149px;
+	height:149px;
+}
+.p_fight_box h3{
+	padding-top: 50px;
+	font-size: 18px;
+}
+.p_fight_box h5{
+	font-size: 13px;
+	font-weight: normal;
+}
+.p_fight_input{
+	text-align: center;
+}
+.p_fight_start{
+	background:#f5f5f5 url(../img/fight_start.png) no-repeat 216px center;
+	background-size:18px 18px;
+}
+.p_fight_end{
+	background:#f5f5f5 url(../img/fight_end.png) no-repeat 216px center;
+	background-size:18px 18px;
+}
+.p_fight_date{
+	background:#f5f5f5 url(../img/fight_date.png) no-repeat 216px center;
+	background-size:18px 18px;
+}
+.p_fight_return a{
+	color:#0274ff;
+}
+/*
+ 
+ * 关于我们
+ * pxq 2017-07-20
+ * */
+.p_aboutus_img{
+	width:100%;
+	height:178px;
+	margin-top: 37px;
+	background: url(../img/us.png) no-repeat;
+	background-size: 100% 178px;
+}
+.p_paragraph{
+	width:90%;
+	margin:0 5%;
+	text-indent: 35px;
+}
+.p_paragraph p{
+	margin-top:20px;
+	font-size: 13px;
+	color:#373535;
+	line-height: 20px;
+}
+/*
+ 
+ * 信息发布
+ * pxq 2017-07-20
+ * */
+.p_information{
+	
+}
+.p_infor_title{
+	width:26%;
+	margin-top:37px;
+}
+.p_infor_title li{
+	height:40px;
+	line-height: 40px;
+	text-align: center;
+	border-bottom: 1px solid #dee0dc;
+	background-color: #f2f1f6;
+}
+.p_infor_title li.p_infor_title_cur{
+	background-color:#fff;
+	border-left:2px solid #f7c114;
+}
+.p_infor_cont{
+	margin-top: 47px;
+	width:74%;
+	padding:0 3%;
+}
+.p_infor_cont li span{
+	display: inline-block;
+	width:80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border:1px solid #e7e7e7;
+	border-radius: 50px;
+	margin-top:5px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+

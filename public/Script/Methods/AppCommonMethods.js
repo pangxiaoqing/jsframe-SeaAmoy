@@ -3,9 +3,9 @@ hmd.extend(hmd.methods,{
 	 * @description 对遮罩层的操作
 	 */
 	maskLayerObj : {
-		maskLayer : function(_label){
+		maskLayer : function(_label,win){
 			var _doc = document,
-				getHTMLSize = this.getHTMLSize(),
+				getHTMLSize = this.getHTMLSize(win),
 				_width = getHTMLSize.width,
 				_height = getHTMLSize.height,
 				_mask = _doc.createElement(_label);
@@ -28,8 +28,8 @@ hmd.extend(hmd.methods,{
 			$('#'+this.layer_id).remove();
 		},
 		//打开遮罩层
-		_open : function(_label){
-			this.maskLayer(_label);
+		_open : function(_label,win){
+			this.maskLayer(_label,win);
 		},
 		//记录弹出层
 		$currentDiv : null,
@@ -58,7 +58,7 @@ hmd.extend(hmd.methods,{
 			self = this,
 			__maskLayerObj = this.maskLayerObj;
 		__maskLayerObj.$currentDiv = $obj;
-		__maskLayerObj._open(label);
+		__maskLayerObj._open(label,window);
 		var getHTMLSize = __maskLayerObj.getHTMLSize(window),
 			_scroll_top = $(window).scrollTop(),
 			_top = getHTMLSize.height/2 - $obj.height()/2+_scroll_top,

@@ -392,9 +392,6 @@ header h3 {
  * 信息发布
  * pxq 2017-07-20
  * */
-.p_information{
-	
-}
 .p_infor_title{
 	width:26%;
 	margin-top:37px;
@@ -415,9 +412,15 @@ header h3 {
 	width:74%;
 	padding:0 3%;
 }
-.p_infor_cont li span{
+/*.p_infor_cont li{
+	display: none;
+}
+.p_infor_cont .p_infor_cont_cur{
+	display: block;
+}
+.p_infor_cont .p_infor_cont_cur span{
 	display: inline-block;
-	width:80px;
+	width:23%;
 	height: 30px;
 	line-height: 30px;
 	text-align: center;
@@ -426,5 +429,61 @@ header h3 {
 	margin-top:5px;
 	text-overflow: ellipsis;
 	overflow: hidden;
+	white-space: nowrap;
+	padding:0 4%;
+}*/
+.p_infor_cont li{
+	display: inline-block;
+	width:23%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border:1px solid #e7e7e7;
+	border-radius: 50px;
+	margin-top:5px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	padding:0 4%;
 }
 
+
+
+
+
+
+/*.p_martop37{
+	margin-top: 37px;
+}
+.p_infor_title{
+	width:26%;
+}
+.p_infor_title li{
+	height:40px;
+	line-height: 40px;
+	text-align: center;
+	border-bottom: 1px solid #dee0dc;
+	background-color: #f2f1f6;
+}
+.p_infor_title li.p_infor_title_cur{
+	background-color:#fff;
+	border-left:2px solid #f7c114;
+}
+.p_infor_cont{
+	width:74%;
+	padding:0 3%;
+}
+.p_infor_cont li{
+	display: inline-block;
+	width:23%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border:1px solid #e7e7e7;
+	border-radius: 50px;
+	margin-top:5px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	padding:0 4%;
+}*/

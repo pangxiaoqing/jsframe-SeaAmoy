@@ -415,10 +415,10 @@ header h3 {
 /*.p_infor_cont li{
 	display: none;
 }
-.p_infor_cont .p_infor_cont_cur{
+.p_infor_cont li.p_infor_cont_cur{
 	display: block;
-}
-.p_infor_cont .p_infor_cont_cur span{
+}*/
+/*.p_infor_cont li span{
 	display: inline-block;
 	width:23%;
 	height: 30px;

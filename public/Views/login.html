@@ -19,17 +19,17 @@
 	</div>
 	<div class="p_tab_cont">
 		<div class="p_logcont">
-			<input class="p_log_emil" type="text" placeholder="187367951@qq.com" />
-			<input class="p_log_password" type="text" placeholder="请输入您的密码" />
-			<button class="p_log_btn"><a href="javascript:;">登录</a></button>
+			<input class="p_log_emil" id="login_email" type="text" placeholder="187367951@qq.com" />
+			<input class="p_log_password" id="login_password" type="text" placeholder="请输入您的密码" />
+			<button class="p_log_btn" id="p_log_btn"><a href="javascript:;">登录</a></button>
 			<div class="p_forget_password"><a href="javascript:;">忘记密码</a></div>
 		</div>
 		<div class="p_regcont">
-			<input class="p_log_emil p_reg_emil" type="text" placeholder="输入一个可靠的邮箱" />
-			<input class="p_log_emil p_reg_password" type="text" placeholder="设置一个复杂的密码" />
-			<input class="p_log_emil p_reg_pw2" type="text" placeholder="劳烦再输入一次密码" />
-			<input class="p_log_emil p_reg_name" type="text" placeholder="取个响亮的昵称吧" />
-			<button class="p_log_btn" id="p_log_btn"><a href="javascript:;">注册</a></button>
+			<input class="p_log_emil p_reg_emil" id="register_email" type="text" placeholder="输入一个可靠的邮箱" />
+			<input class="p_log_emil p_reg_password" id="register_password" type="text" placeholder="设置一个复杂的密码" />
+			<input class="p_log_emil p_reg_pw2" id="register_password2" type="text" placeholder="劳烦再输入一次密码" />
+			<input class="p_log_emil p_reg_name" id="register_nickname" type="text" placeholder="取个响亮的昵称吧" />
+			<button class="p_log_btn" id="p_reg_btn"><a href="javascript:;">注册</a></button>
 		</div>
 	</div>
 	<div id="p_reg_mask" class="p_reg_mask">
@@ -37,7 +37,10 @@
 		<div class="p_mail"><img src="../Styles/img/mail.png" /></div>
 		<h4>谢谢您的注册</h4>
 		<p>激活邮件已经发送到您的邮箱赶紧去激活吧!</p>
-		<div class="p_goemil"><a href="javascript:;">去邮箱激活</a></div>
+		<div class="p_goemil" id="p_goemil"><a href="javascript:;">去邮箱激活</a></div>
+	</div>
+	<div id="p_reg_maskerror" class="p_reg_mask">
+		<span id="p_close" class="p_close"></span>
 	</div>
 	<script type="text/javascript" src="./../Script/Libs/jquery.1.9.min.js"></script>
 	<script type="text/javascript" src="./../Script/main.js"></script>

@@ -16,14 +16,14 @@ hmd.extend(hmd.service,{
 
 	oRegister : function(callback){
 			var obj = {
-			            url:hmd.port+"/register",
-									type:'POST',
-									data:{
-										email:$('.Oemail').val(),
-										nickname:$('.Oname').val(),
-										password:$('.Opassword').val()
-									},
-									dataType:'json'}
+				        url:hmd.port+"/register",
+						type:'POST',
+						data:{
+							email:$('#register_email').val(),
+							nickname:$('#register_nickname').val(),
+							password:$('#register_password').val()
+						},
+						dataType:'json'}
 		hmd.send(obj,callback);
 	},
 	oLogin : function(callback){
@@ -31,8 +31,8 @@ hmd.extend(hmd.service,{
 			            url:hmd.port+"/login",
 									type:'POST',
 									data:{
-										email:$('.login_email').val(),
-										password:$('.login_password').val()
+										email:$('#login_email').val(),
+										password:$('#login_password').val()
 									},
 									dataType:'json'}
 		hmd.send(obj,callback);

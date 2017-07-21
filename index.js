@@ -5,12 +5,13 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
-// var json = require('./public/json/json.json');
+var json = require('./public/Script/JSON/information_json.json');
 
 
 app.use(express.static('public'));
 app.use(express.static('public/views'));
-// app.use(express.static('public/'));
+//app.use(express.static('public/Script/JSON'));
+
 
 app.get('/index.html', function(req, res) {
 	res.sendFile(__dirname + "/" + "index.html");
@@ -22,6 +23,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
+
 var server = app.listen(8080, function() {
 
 	var host = server.address().address
@@ -31,6 +33,14 @@ var server = app.listen(8080, function() {
 })
 
 
+
+app.get('/login',function(req,res){
+	return res.send({success:1})
+})
+app.post('/information',function(req,res){
+	//console.log(json);
+	return res.send({data:json});
+})
 
 //login.html
 // app.post('/login',function(req,res){

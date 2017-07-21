@@ -69,11 +69,11 @@
       * */
      $("#p_goemil").click(function(){
      	var emil = $('#register_email').val();
-     	var emil_sub = emil.substring(0,emil.indexOf("@"));
-     	var reg = new RegExp(emil_sub);
-     	var emil_href = emil.replace(reg,"mail");
-     	console.log(emil_href);
-     	window.location.href=emil_href;
+     	var emil_sub = emil.substring(emil.indexOf("@"));
+//   	var reg = new RegExp(emil_sub);
+//   	var emil_href = emil.replace(reg,"mail");
+//   	console.log(emil_href);
+     	window.location.href="mail"+emil_sub;
      })
      
      
